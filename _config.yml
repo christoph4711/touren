@@ -7,5 +7,5 @@ gallery:
 
 markdown: kramdown
 theme: minima
-baseurl: "/touren" # Wenn die Seite in einem Unterverzeichnis liegt, andernfalls leer lassen
+baseurl: "" # Wenn die Seite in einem Unterverzeichnis liegt, andernfalls leer lassen
 url: "https://christoph4711.github.io"
