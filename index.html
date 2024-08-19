@@ -14,3 +14,19 @@ title: "Startseite"
         {% endfor %}
     </ul>
 </section>
+
+<section>
+    <h2>Galerien</h2>
+    <ul>
+        {% assign gallery_pages = site.pages | where: "gallery", "tag1" %}
+        {% assign gallery_pages = gallery_pages | concat: site.pages | where: "gallery", "tag2" %}
+        {% assign gallery_pages = gallery_pages | concat: site.pages | where: "gallery", "tag3" %}
+        
+        {% for page in gallery_pages %}
+            <li>
+                <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
+                <p>{{ page.excerpt }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
