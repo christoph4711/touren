@@ -1,8 +1,9 @@
+plugins:
+  - jekyll-gallery-generator
+
 gallery:
-  source: _images
-  tags:
-    - tag1
-    - tag2
+  base_path: /images
+  output_dir: /gallery
 
 markdown: kramdown
 theme: minima
