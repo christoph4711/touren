@@ -1,0 +1,11 @@
+title: "Meine Jekyll Galerie"
+theme: jekyll-photo-gallery
+
+gallery:
+  path: _images
+  title: "Meine Galerie"
+  thumbnail_size: 200x200
+  layout: gallery
+
+plugins:
+  - jekyll-photo-gallery
