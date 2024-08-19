@@ -1,14 +1,11 @@
 ---
 layout: post
-title: "Meine Touren Galerie"
+title: "Genf - Nizza 2024"
 date: 2024-08-19
 ---
 
-# Willkommen zu meiner Touren Galerie
-
-Hier sind einige Highlights meiner letzten Touren:
-
-## Die besten Momente
+# Genf - Nizza 2024
+## Prolog
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel venenatis eros.
 
