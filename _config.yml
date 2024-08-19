@@ -2,6 +2,6 @@ title: "Meine Jekyll Galerie"
 theme: minima
 
 gallery:
-  path: "assets/images/gallery/"
+  path: "_images"
   title: "Meine Galerie"
 
