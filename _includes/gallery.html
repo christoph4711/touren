@@ -1,10 +1,11 @@
 {% if page.gallery %}
   <div class="gallery">
-    {% assign images = site.static_files | where: "path", "/images/" | where: "name", page.gallery %}
+    {% assign images_dir = "/images/" | append: page.gallery %}
+    {% assign images = site.static_files | where: "path", images_dir %}
     {% for image in images %}
       <figure>
-        <img src="{{ image.path | relative_url }}" alt="{{ image.name }}">
-        <figcaption>{{ image.name }}</figcaption>
+        <img src="{{ image.path | relative_url }}" alt="{{ image.basename | remove: '.jpg' }}">
+        <figcaption>{{ image.basename | remove: '.jpg' }}</figcaption>
       </figure>
     {% endfor %}
   </div>
