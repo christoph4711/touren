@@ -3,7 +3,7 @@ name: Jekyll Site CI
 on:
   push:
     branches:
-      - main  # Stelle sicher, dass dies der Branch ist, auf den du pusht
+      - main
   pull_request:
     branches:
       - main
@@ -13,25 +13,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.1'
-        bundler-cache: true
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1' # Stelle sicher, dass die richtige Ruby-Version verwendet wird
+          bundler-cache: false # Deaktiviere den Bundler-Cache, da wir keine Gemfile haben
 
-    - name: Install Dependencies
-      run: |
-        gem install jekyll
-        bundle install
+      - name: Install Jekyll
+        run: |
+          gem install jekyll
 
-    - name: Build Jekyll Site
-      run: bundle exec jekyll build
+      - name: Build Jekyll site
+        run: |
+          jekyll build
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.TOKEN }}
-        publish_dir: ./_site
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.TOKEN }}
+          publish_dir: ./_site
