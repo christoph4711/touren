@@ -1,3 +1,5 @@
+markdown: kramdown
+theme: minima
 plugins:
   - jekyll-gallery-generator
 baseurl: "/touren" # Wenn die Seite in einem Unterverzeichnis liegt, andernfalls leer lassen
