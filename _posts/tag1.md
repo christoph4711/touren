@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: "Tag 1 Galerie"
 gallery: tag1
 ---
