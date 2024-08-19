@@ -1,7 +1,13 @@
-<div class="gallery">
-  {% for image in page.gallery_images %}
-    <a href="{{ image.url }}" data-lightbox="gallery" data-title="{{ image.filename }}">
-      <img src="{{ image.thumbnail_url }}" alt="{{ image.filename }}">
-    </a>
-  {% endfor %}
-</div>
+{% if page.gallery %}
+  <div class="gallery">
+    {% assign images = site.static_files | where: "path", "/images/" | where: "name", page.gallery %}
+    {% for image in images %}
+      <figure>
+        <img src="{{ image.path | relative_url }}" alt="{{ image.name }}">
+        <figcaption>{{ image.name }}</figcaption>
+      </figure>
+    {% endfor %}
+  </div>
+{% else %}
+  <p>Keine Galerie gefunden.</p>
+{% endif %}
