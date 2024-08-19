@@ -1,8 +1,9 @@
 ---
 layout: gallery
 title: "Meine Galerie"
-gallery: true
+permalink: /gallery/
 ---
+
 
 
 # Meine Bilder
