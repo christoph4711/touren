@@ -1,43 +1,16 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Touren Galerie</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
-<body>
-    <header>
-        <h1>Willkommen auf meiner Touren Galerie</h1>
-        <p>Entdecke die schönsten Momente meiner letzten Touren!</p>
-    </header>
+---
+layout: default
+title: "Startseite"
+---
 
-    <main>
-        <section>
-            <h2>Neueste Touren</h2>
-            <ul>
-                {% for post in site.posts %}
-                    <li>
-                        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                        <p>{{ post.excerpt }}</p>
-                    </li>
-                {% endfor %}
-            </ul>
-        </section>
-
-        <section>
-            <h2>Galerie</h2>
-            <div class="gallery">
-                <img src="{{ '/_images/bild1.jpg' | relative_url }}" alt="Bild 1" width="300" />
-                <img src="{{ '/_images/bild2.jpg' | relative_url }}" alt="Bild 2" width="300" />
-                <img src="{{ '/_images/bild3.jpg' | relative_url }}" alt="Bild 3" width="300" />
-                <!-- Füge hier weitere Bilder hinzu -->
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Christoph4711. Alle Rechte vorbehalten.</p>
-    </footer>
-</body>
-</html>
+<section>
+    <h2>Neueste Touren</h2>
+    <ul>
+        {% for post in site.posts %}
+            <li>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <p>{{ post.excerpt }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
