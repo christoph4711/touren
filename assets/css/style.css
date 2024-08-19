@@ -1,0 +1,14 @@
+/* Beispiel für eine einfache Galerie */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gallery img {
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+}
