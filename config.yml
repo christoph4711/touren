@@ -1,0 +1,7 @@
+theme: jekyll-photo-gallery
+
+gallery:
+  path: _images         # Der Pfad zu deinem Bilderordner
+  title: "Meine Galerie" # Der Titel deiner Galerie
+  thumbnail_size: 200x200 # Größe der Thumbnails
+  layout: gallery        # Das Layout, das verwendet werden soll
