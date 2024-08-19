@@ -1,8 +1,8 @@
 ---
 layout: gallery
 title: "Meine Galerie"
-permalink: /gallery/
+gallery: true
 ---
 
-# Willkommen zu meiner Galerie
-Hier sind einige meiner Lieblingsbilder.
+
+# Meine Bilder
